@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 
 
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = '/api';
 
 export default function Home() {
 	const router = useRouter();
