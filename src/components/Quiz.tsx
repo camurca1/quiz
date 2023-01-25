@@ -21,7 +21,7 @@ export default function Quiz(props: QuizProps) {
         <div className={styles.quiz}>
             {props.question ? 
                 <Question value={props.question} 
-                          timeToAnswer={6}
+                          timeToAnswer={20}
                           onChosenAnswer={onChosenAnswer}
                           onTimeout={props.goToNextStep}/>
                 : "Carregando..."
