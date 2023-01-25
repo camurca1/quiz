@@ -1,0 +1,83 @@
+.answer {
+    display: flex;
+    min-width: 500px;
+    width: 80%;
+    height: 100px;
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.answerContent {
+    position: relative;
+    display: flex;
+    flex: 1;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.isRevealed.answerContent {
+    position: relative;
+    display: flex;
+    flex: 1;
+    transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    --webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cardFront {
+    background-color: #fff;
+    color: #000;
+    align-items: center;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+}
+
+.cardBack > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.correctAnswer .value, .wrongAnswer .value {
+    font-size: 1.5rem;
+}
+
+.correctAnswer {
+    background-color: #2baa6d;
+}
+
+.wrongAnswer {
+    background-color: #e44a4c;
+}
+
+.optionIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.value {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
